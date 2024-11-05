@@ -8,39 +8,40 @@
 <body>
 <div class="container">
     <div class="sidebar">
-        <div class="sidebar-structure">
-            <div class="logo">
-                <img src="" alt="Logo image">
-                <h3>Dashboard</h3>
-            </div>
-            <div class="menu">
-                <div><img src="" alt="Home image"><h2>Home</h2></div>
-                <div><img src="" alt="Profile image"><h2>Profile</h2></div>
-                <div><img src="" alt="Messages image"><h2>Messages</h2></div>
-                <div><img src="" alt="History image"><h2>History</h2></div>
-                <div><img src="" alt="Tasks image"><h2>Tasks</h2></div>
-                <div><img src="" alt="Communities image"><h2>Communities</h2></div>
-            </div>
-            <div class="settings">
-                <div><img src="" alt="Settings image"><h2>Settings</h2></div>
-                <div><img src="" alt="Support image"><h2>Support</h2></div>
-                <div><img src="" alt="Privacy image"><h2>Privacy</h2></div>
-            </div>
+        <div class="logo">
+            <img src="icons/logo.png" alt="Logo image">
+            <h3>Dashboard</h3>
+        </div>
+        <div class="menu">
+            <div><img src="icons/home.svg" alt="Home image"><h2>Home</h2></div>
+            <div><img src="icons/profile.svg" alt="Profile image"><h2>Profile</h2></div>
+            <div><img src="icons/messages.svg" alt="Messages image"><h2>Messages</h2></div>
+            <div><img src="icons/history.svg" alt="History image"><h2>History</h2></div>
+            <div><img src="icons/tasks.svg" alt="Tasks image"><h2>Tasks</h2></div>
+            <div><img src="icons/community.svg" alt="Communities image"><h2>Communities</h2></div>
+        </div>
+        <div class="settings">
+            <div><img src="icons/settings.svg" alt="Settings image"><h2>Settings</h2></div>
+            <div><img src="icons/support.svg" alt="Support image"><h2>Support</h2></div>
+            <div><img src="icons/shield.svg" alt="Privacy image"><h2>Privacy</h2></div>
         </div>
     </div>
 
     <div class="header">
         <div class="upper-part">
-            <input type="text" placeholder="Search...">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <img src="icons/search-tool.svg" alt="Search glass icon">
+            </div>
             <div class="user-info">
-                <img src="" alt="Ringing bell image">
-                <img src="" alt="User profile image">
+                <img id="bell-image" src="icons/bell.svg" alt="Ringing bell image">
+                <img id="user-profile-image" src="icons/user-profile.svg" alt="User profile image">
                 <span>Arthur Morgan</span>
             </div>
         </div>
         <div class="lower-part">
             <div class="profile">
-                <img src="" alt="User profile image">
+                <img src="icons/user-profile.svg" alt="User profile image">
                 <div class="greeting">
                     <p>Hi there,</p>
                     <h4>Arthur Morgan (@AMorgan)</h4>
@@ -60,27 +61,27 @@
             <div class="main-content">
                 <div class="project-card">
                     <h3>Super Cool Project</h3>
-                    <p>Sed tempus ut lacus ut scelerisque...</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ornare turpis urna, eget vulputate dui pharetra sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
                 <div class="project-card">
                     <h3>Less Cool Project</h3>
-                    <p>Nullam condimentum ipsum ut lectus...</p>
+                    <p>Sed mattis libero dui, ac maximus tortor euismod eget. Vivamus at mauris lectus. Quisque lectus libero, dignissim at sodales in, pretium a neque.</p>
                 </div>
                 <div class="project-card">
                     <h3>Impossible App</h3>
-                    <p>In hac habitasse platea dictumst...</p>
+                    <p>Praesent eget aliquam libero. Fusce eget viverra nisi, et congue erat. Etiam mattis aliquet lorem, id eleifend magna suscipit vitae. Duis id venenatis lorem, eget congue magna.</p>
                 </div>
                 <div class="project-card">
                     <h3>Easy Peasy App</h3>
-                    <p>Etiam cursus eros ac efficitur...</p>
+                    <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum leo augue, commodo sed laoreet sed, condimentum at felis.</p>
                 </div>
                 <div class="project-card">
                     <h3>Ad Blocker</h3>
-                    <p>Quisque eget rutrum nisl...</p>
+                    <p>Aliquam erat volutpat. Vivamus imperdiet vulputate nunc. Sed rhoncus rhoncus enim, vel cursus quam convallis ac.</p>
                 </div>
                 <div class="project-card">
                     <h3>Money Maker</h3>
-                    <p>Praesent convallis, libero quis...</p>
+                    <p>Pellentesque aliquet viverra quam interdum vehicula. Phasellus mollis dui ipsum, at tincidunt nisl efficitur id. Nulla porttitor, quam nec mollis volutpat, ex enim euismod massa, posuere mollis odio massa ac arcu.</p>
                 </div>
             </div>
         </div>
@@ -89,18 +90,53 @@
             <div class="announcements">
                 <h3>Announcements</h3>
                 <div class="announcements-content">
-                    <p>Site Maintenance</p>
-                    <p>Community Share Day</p>
-                    <p>Updated Privacy Policy</p>
+                    <div>
+                        <h4>Site Maintenance</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum nunc vitae nulla suscipit placerat.</p>
+                    </div>
+                    <hr class="separator">
+                    <div>
+                        <h4>Community Share Day</h4>
+                        <p>Etiam varius semper ligula, in pulvinar neque accumsan a. Vivamus tempus convallis luctus.</p>
+                    </div>
+                    <hr class="separator">
+                    <div>
+                        <h4>Updated Privacy Policy</h4>
+                        <p>Quisque suscipit in sem id facilisis. Nullam egestas turpis urna, eu egestas turpis viverra in. Vivamus vulputate augue velit.</p>
+                    </div>
                 </div>
             </div>
             <div class="trending">
                 <h3>Trending</h3>
                 <div class="trending-content">
-                    <p>@tegan - World Peace Builder</p>
-                    <p>@morgan - Super Cool Project</p>
-                    <p>@kendall - Life Changing App</p>
-                    <p>@alex - No Traffic Maker</p>
+                    <div>
+                        <img src="icons/avatar1.svg" alt="Avatar image 1">
+                        <div>
+                            <h4>@tegan</h4>
+                            <p>World Peace Builder</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/user-profile.svg" alt="Profile image">
+                        <div>
+                            <h4>@morgan</h4>
+                            <p>Super cool project</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/avatar2.svg" alt="Avatar image 2">
+                        <div>
+                            <h4>@kendall</h4>
+                            <p>Life changing app</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="icons/avatar3.svg" alt="Avatar image 3">
+                        <div>
+                            <h4>@alex</h4>
+                            <p>Galaxy tracker program</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

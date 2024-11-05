@@ -6,7 +6,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr;
     height: 100vh;
     font-family: Arial, sans-serif;
@@ -19,16 +19,21 @@
     color: #ECF0F1;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 25px;
+    gap: 3rem;
 }
 
 .sidebar .logo {
     display: flex;
+    justify-content: start;
     align-items: center;
     gap: 10px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #3498DB;
-    margin-bottom: 20px;
+    font-size: 24px;
+}
+.sidebar .logo img {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
 }
 
 .sidebar .menu div, .sidebar .settings div {
@@ -36,6 +41,7 @@
     align-items: center;
     gap: 10px;
     padding: 10px 0;
+    font-size: 14px;
 }
 
 .sidebar .menu div:hover, .sidebar .settings div:hover {
@@ -50,11 +56,9 @@
     height: 20px;
 }
 
-
 /* Stylizacja headera */
 .header {
-    /*background-color: red;*/
-    padding: 20px;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -66,16 +70,46 @@
     align-items: center;
 }
 .header .upper-part input {
-    width: 40%;
+    width: clamp(50px, 40vw, 1000px);
     height: 30px;
-    background-color: grey;
+    background-color: #DBF1FF;
     border: none;
     border-radius: 20px;
 }
 .upper-part input::placeholder {
     position: relative;
-    color: white;
+    color: black;
     left: 20px;
+}
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+.search-bar img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: calc(40vw - 40px);
+    cursor: pointer;
+}
+.upper-part .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.upper-part .user-info img {
+    cursor: pointer;
+}
+
+.user-info img:first-child {
+    height: 20px;
+    width: 20px;
+}
+.user-info img:nth-child(2) {
+    height: 40px;
+    width: 40px;
 }
 
 .header .lower-part {
@@ -83,14 +117,20 @@
     justify-content: space-between;
     align-items: center;
 }
+.profile img {
+    height: 80px;
+    width: 80px;
+}
 .header .lower-part .profile {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
 }
 .header .lower-part .profile .greeting {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    font-size: 18px;
 }
 .header .lower-part .action-buttons {
     display: flex;
@@ -104,11 +144,11 @@
     color: white;
 }
 
-
 /* Stylizacja footer */
 .footer {
     grid-column: 2 / 3;
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr auto;
     gap: 20px;
     padding: 20px;
     background-color: #ECF0F1;
@@ -125,7 +165,7 @@
 
 .main-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
 }
 
@@ -145,10 +185,10 @@
 }
 
 .side-content {
+    width: clamp(200px, 250px, 300px);
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 3fr 2fr;
     gap: 20px;
-    width: 250px;
 }
 
 .announcements, .trending {
@@ -162,7 +202,7 @@
 .announcements-content, .trending-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: #FFF;
     padding: 15px;
     border-radius: 10px;
@@ -177,4 +217,34 @@
 
 .announcements-content p:last-child, .trending-content p:last-child {
     margin-bottom: 0;
+}
+
+.announcements-content div h4{
+    font-size: 16px;
+}
+.announcements-content div p {
+    color: grey;
+}
+
+.announcements-content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .2em;
+}
+
+.trending-content > div {
+    display: flex;
+    align-content: center;
+    gap: 1rem;
+}
+.trending-content div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .2em;
+}
+.trending-content img {
+    height: 40px;
+    width: 40px;
 }
